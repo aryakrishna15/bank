@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>REGISTER</h2>
+  <form method="POST"  action="">
+    {% csrf_token %}
+
+      <div class="container ">
+      <div class="box-1">
+ <div class="name">
+  <label>
+        <input type="text" name="name" placeholder="Full Name" required >
+    </label>
+     </div>
+
+<br>
+          <div class="dob">
+              <label>
+                 <input type="date" name="dob" placeholder="Date of Birth" required>
+              </label>
+          </div>
+
+<br>
+          <div class="age">
+   <label>
+        <input type="number" name="age" placeholder="Age" required>
+    </label>
+</div>
+
+      <div class="gender">
+        <label for="gender" ></label>
+        <select id="gender" name="gender" required>
+            <option value="">Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+      </div>
+
+<div class="phonenumber">
+
+        <label for="phoneNumber"></label>
+          <input type="tel" id="phoneNumber" name="phonenumber" placeholder="phone number" pattern="[0-9]{10}" maxlength="10" required>
+
+</div>
+<br>
+          <div class="email_res">
+
+
+
+      <label>
+        <input type="email" name="mailid" placeholder="Email ID" required>
+    </label>
+<br>
+          <br>
+      <div class="box-2">
+
+   <label>
+        <input type="text" name="address" placeholder="Residential Address" required>
+    </label>
+          </div>
+   </div>
+<div class="dis">
+<label for="district"></label>
+    <select id="district" onchange="populateBranches()" required>
+        <option value="" selected disabled >Select District</option>
+
+  <option value="district1">Thiruvananthapuram</option>
+  <option value="district2">Kollam</option>
+  <option value="district3">Pathanamthitta</option>
+  <option value="district4">Alappuzha</option>
+  <option value="district5">Kottayam</option>
+  <option value="district6">Idukki</option>
+  <option value="district7">Ernakulam</option>
+  <option value="district8">Thrissur</option>
+  <option value="district9">Palakkad</option>
+  <option value="district10">Malappuram</option>
+  <option value="district11">Kozhikode</option>
+  <option value="district12">Wayanad</option>
+  <option value="district13">Kannur</option>
+  <option value="district14">Kasaragod</option>
+    </select>
+</div>
+      <div class="branch">
+    <label for="branch"></label>
+    <select id="branch" required>
+        <option value="" selected disabled>Select Branch</option>
+    </select>
+
+    <script>
+
+        const branchesByDistrict = {
+            district1: ["Kazhakkoottam", "Neyyattinkara", "Varkala"],
+district2: ["Punalur", "Kunnathur", "Kottarakkara"],
+district3: ["Ranni", "Mallappally", "Pullad"],
+district4: ["Cherthala", "Ambalappuzha", "Kuttanadu"],
+district5: ["Vaikom", "Kaduthuruthy", "Kallara"],
+district6: ["Adimaly", "Devikulam", "Nedumkandam"],
+district7: ["Aluva", "Kochi", "Kanayannoor"],
+district8: ["Thrissur", "Kunnamkulam", "Guruvayur"],
+district9: ["Thrithala", "Pattambi", "Shornur"],
+district10: ["Malappuram", "Mankada", "Perinthalmanna"],
+district11: ["Vadakara", "Koyilandy", "Thamarassery"],
+district12: ["Mananthavady", "Kalpetta", "Sulthanbathery"],
+district13: ["Thalasseri", "Kannur", "Thaliparamba"],
+district14: ["Adkathbail", "Adoor", "Adhur"]
+
+
+
+
+        };
+
+        function populateBranches() {
+            // Get selected district
+            const selectedDistrict = document.getElementById("district").value;
+
+
+            const branchDropdown = document.getElementById("branch");
+
+
+            branchDropdown.innerHTML = '<option value="" selected disabled>Select Branch</option>';
+
+
+            if (selectedDistrict && branchesByDistrict[selectedDistrict]) {
+                branchesByDistrict[selectedDistrict].forEach(branch => {
+                    const option = document.createElement("option");
+                    option.value = branch;
+                    option.text = branch;
+                    branchDropdown.appendChild(option);
+                });
+            }
+        }
+    </script>
+      </div>
+      <div class="ac">
+        <label ></label>
+
+      <select id="account_type" name="AccountType" required>
+            <option value="">Account Type</option>
+            <option value="male">Savings Account</option>
+            <option value="female">Current Account</option>
+            <option value="other">Joint Account</option>
+            <option value="other">NRI Account</option>
+        </select>
+
+      </div>
+
+      </div>
+          <br>
+        <label>Materials Provide</label>
+        <div class="checkbox">
+            <input type="checkbox" id="material1" name="materials_provide1" value="Material 1">
+            <label for="material1">Debit Card</label><br>
+
+            <input type="checkbox" id="material2" name="materials_provide2" value="Material 2">
+            <label for="material2">Credit Card</label><br>
+
+            <input type="checkbox" id="material3" name="materials_provide3" value="Material 3">
+            <label for="material3">Cheque Book</label><br>
+        </div>
+
+
+
+<div class="button1">
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="{% url 'bankapp:logout' %}" class="btn btn-block">Logout</a>
+</div>
+</div>
+  </form>
+
+{% endblock %}

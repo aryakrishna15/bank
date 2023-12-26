@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <div class="container mt-10 text-center">
+    <div class="alert">
+         <strong>Application successfully Registered</strong>
+         <p>Thankyou for submitting your form</p>
+     </div>
+    <a href="{% url 'bankapp:home' %}" class="btn btn-success">Return to home page</a>
+
+ </div>
+{% endblock %}

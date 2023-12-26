@@ -1,0 +1,205 @@
+/* Add the following CSS to your existing styles */
+/*login*/
+body {
+  font-family: 'Times New Roman', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title {
+  color: #333;
+}
+
+form {
+  max-width: 100px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+  display: none; /* Hide empty labels */
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.log{
+    width: 40%;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+a {
+  color: #3498db;
+}
+
+/* register_form*/
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #f4f4f4;
+}
+
+form {
+    max-width: 50%;
+    height: 200%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+
+    color: #333;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Set a specific width for input elements */
+input {
+    width: 200px; /* You can adjust the width as needed */
+}
+
+select {
+    appearance: none;
+}
+
+.button1 {
+    text-align: center;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.sec1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sec1 > div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.mat {
+    margin-top: 20px;
+}
+
+.mat input {
+    margin-right: 5px;
+}
+
+
+/* Style for each checkbox and label */
+.materials-container input[type="checkbox"] {
+    margin-right: 10px; /* Add some space between checkbox and label */
+}
+
+
+.container input {
+    width: 250%;
+}
+.phonenumber{
+    width: 200px;
+}
+/* Add the following CSS to your existing styles */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 30px; /* Add space between checkbox and label */
+}
+
+.checkbox label {
+    margin-right: 50px;
+    /* Add space between checkbox and label */
+}
+/*register*/
+
+
+.reg_input{
+    width: 40%;
+}
+.reg_inp{
+    width: 40%;
+}
+
+/*.reg_in{*/
+/*    width:80px;*/
+/*}*/
+.reg_in input[type="password"] {
+    width: 100%; /* Adjust the width as needed */
+}
+/*banner home*/
+/* styles.css */
+
+.image-container {
+    /* Add any styling for the container div */
+    text-align: center; /* Center the image */
+}
+
+img {
+    /* Add any styling for the image */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
